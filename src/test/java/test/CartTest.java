@@ -59,7 +59,7 @@ public class CartTest extends CommonConditions{
                         .containsProduct(prod) != cartPage
                         .deleteProduct(prod)
                         .containsProduct(prod));
-        Assert.assertTrue(priceAfterBuying.equals(cartPage.getPrice()));
+        Assert.assertNotEquals(priceAfterBuying, cartPage.getPrice());
     }
 
     @Test
